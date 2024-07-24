@@ -8,7 +8,6 @@ class Scoreboard(Turtle):
         self.score = 0
         with open('data.txt') as file:
             self.high_score = int(file.read())
-
         self.color("white")
         self.penup()
         self.goto(0, 270)
