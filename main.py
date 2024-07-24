@@ -35,12 +35,12 @@ while is_over:
 
     # When snack hit the wall game over
     if snack.head.xcor() > 280 or snack.head.xcor() < -280 or snack.head.ycor() > 280 or snack.head.ycor() < -280:
-        is_over = False
-        score.game_over()
+        score.reset()
+        snack.reset()
 
     for segment in snack.segment[1:]:
         if snack.head.distance(segment) < 10:
-            is_over = False
-            score.game_over()
+            score.reset()
+            snack.reset()
 
 screen.exitonclick()
